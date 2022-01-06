@@ -913,6 +913,10 @@
 .playlist__item-img {
     border: 1px solid #992392;
     border-radius: 6px;
+    height: 160px;
+    background-repeat: round;
+    background-size: auto;
+    width: 100%;
     
 }
 
