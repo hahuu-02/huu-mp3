@@ -913,7 +913,7 @@
 .playlist__item-img {
     border: 1px solid #992392;
     border-radius: 6px;
-    height: 160px;
+    height: 180px;
     background-repeat: round;
     background-size: auto;
     width: 100%;
@@ -979,6 +979,11 @@
 .no-active {
     margin: 70px 0;
     height: 1000px;
+}
+
+.chua-viet {
+    width: 100%;
+    margin: 20px 0 0 240px;
 }
 .container__abum {
     display: none;
@@ -1162,6 +1167,7 @@
     border-radius: 20px;
     cursor: pointer;
 }
+
 .progress::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -1171,6 +1177,16 @@
     background: rgb(201, 54, 181);
     cursor: pointer;
   }
+  .progress:hover {
+    background: rgb(184, 151, 184); 
+  }
+
+.progress::-webkit-slider-thumb:hover {
+    background: rgb(153, 135, 150);
+    height: 18px;
+    width: 18px;
+  }
+
 /* PLAYER__OPTION */
 .player__option {
     margin-left: 10px;
