@@ -494,12 +494,12 @@ const app = {
         this.loadCurrentSong();
 
         // lưu cấu hình vào localStorange
-        randomBtns.forEach(randomBtn => {
-            randomBtn.classList.toggle('active--primary', this.isRandom)
-        });
-        repeatBtns.forEach(repeatBtn => {
-            repeatBtn.classList.toggle('active--primary', this.isRepeat)
-        });
+//         randomBtns.forEach(randomBtn => {
+//             randomBtn.classList.toggle('active--primary', this.isRandom)
+//         });
+//         repeatBtns.forEach(repeatBtn => {
+//             repeatBtn.classList.toggle('active--primary', this.isRepeat)
+//         });
 
     }
 }
