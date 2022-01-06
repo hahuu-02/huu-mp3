@@ -5,7 +5,8 @@ const PLAYER_STORANGE = 'Huu_player'
 const playlist = $('.conten__song');
 const headings = $$('.player__title-song');
 const authors = $$('.player__title-author');
-const cdThumbs = $$('.player__container-image');
+const cdThumb = $('.player__container-image');
+const cdThumb1 = $('.player__container-image-1');
 const cdThumb2 = $('.footer__container-img')
 const audio = $('#audio');
 const playBtns = $$('.player--btn')
@@ -172,29 +173,31 @@ const app = {
     },
 
     handelEvent: function() {
-        // progress.oninput = function() {
-        //     progressBtn.innerHTML = this.value;
-        //   }
+        progress.oninput = function() {
+            progressBtn.innerHTML = this.value;
+        }
         const _this = this
-        // ACTIVE--PRIMARY CHO ICON-HEART
-        // activePrimay.onclick = function() {
-        //     console.log('huu')
-        //     activePrimay.classList.add('active--primary')
-        // }
 
         // Xử lí quay image
-        cdThumbs.forEach(cdThumb => {
-            let cdThumbAnimate = cdThumb.animate([
-                { transform: 'rotate(360deg)' }
-             ], {
-                duration: 15000,
-                iterations: Infinity
-                
-            });            
-            cdThumbAnimate.pause();
-        });
        
+        const cdThumbAnimate = cdThumb.animate([
+            { transform: 'rotate(360deg)' }
+            ], {
+            duration: 15000,
+            iterations: Infinity
+            
+        });            
+        cdThumbAnimate.pause();
 
+        const cdThumbAnimate1 = cdThumb1.animate([
+            { transform: 'rotate(360deg)' }
+            ], {
+            duration: 15000,
+            iterations: Infinity
+            
+        });            
+        cdThumbAnimate1.pause();
+      
         const cdThumbAnimate2 = cdThumb2.animate([
             { transform: 'rotate(360deg)' }
          ], {
@@ -223,7 +226,8 @@ const app = {
             playBtns.forEach(playBtn => {
             playBtn.classList.add('active--audio') 
             } );
-
+            cdThumbAnimate.play();
+            cdThumbAnimate1.play()
             cdThumbAnimate2.play()
         } 
         // Khi song bị pause
@@ -232,6 +236,8 @@ const app = {
             playBtns.forEach(playBtn => {
             playBtn.classList.remove('active--audio') 
             });
+            cdThumbAnimate.pause();
+            cdThumbAnimate1.pause();
             cdThumbAnimate2.pause()
         }
         // Xử lí khi tua song
@@ -240,8 +246,6 @@ const app = {
                 audio.play()
                 const seekTime = (audio.duration * e.target.value) / 100
                 audio.currentTime = seekTime
-    
-                // console.log(e.target.value)
                 
                 checkOnmouseAndTouch = true;
             }
@@ -304,13 +308,6 @@ const app = {
             audio.volume = seekVolume       
         },
 
-        // audio.onvolumechange = function() {
-        //     if(audio.volume) {
-        //         const timeUpdate = Math.floor(audio.currentTime / audio.duration * 100)
-        //         progress.value = timeUpdate;
-        //     }
-        // },
-
         // Khi next bài hát
         nextBtns.forEach(nextBtn => {
             nextBtn.onclick = function() {
@@ -365,9 +362,7 @@ const app = {
                 _this.isRepeat = !_this.isRepeat
                 _this.setConfig('isRepeat', _this.isRepeat);
                 repeatBtn.classList.toggle('active--primary', _this.isRepeat)
-                // if($$('icon-repeat.active--primary')) {
-                //     .classList.add('active--primary')
-                // }
+                
             };
             
 
@@ -441,11 +436,10 @@ const app = {
         authors.forEach(author => {
             author.textContent = this.currentSong.author
         });
-
-        cdThumbs.forEach(cdThumb => {
-            cdThumb.style.background = `url('${this.currentSong.image}') no-repeat center / cover`
-        });
-
+        
+        cdThumb.style.background = `url('${this.currentSong.image}') no-repeat center / cover`
+        cdThumb1.style.background = `url('${this.currentSong.image}') no-repeat center / cover`
+       
         cdThumb2.style.background = `url('${this.currentSong.image}') no-repeat center / cover`
         audio.src = this.currentSong.song         
     },
@@ -494,12 +488,12 @@ const app = {
         this.loadCurrentSong();
 
         // lưu cấu hình vào localStorange
-        randomBtns.forEach(randomBtn => {
-            randomBtn.classList.toggle('active--primary', this.isRandom)
-        });
-        repeatBtns.forEach(repeatBtn => {
-            repeatBtn.classList.toggle('active--primary', this.isRepeat)
-        });
+        // randomBtns.forEach(randomBtn => {
+        //     randomBtn.classList.toggle('active--primary', this.isRandom)
+        // });
+        // repeatBtns.forEach(repeatBtn => {
+        //     repeatBtn.classList.toggle('active--primary', this.isRepeat)
+        // });
 
     }
 }
