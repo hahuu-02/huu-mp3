@@ -357,11 +357,11 @@
     padding-left: 0;
 }
 .header__history-item {
-    display: block;
+    display: flex;
     line-height: 2rem;
 }
 .header__item-icon {
-    margin: 0 6px 0 30px;
+    margin: 10px 8px 0 30px;
     font-size: 1.4rem;
     color: var(--white-color);
 }
@@ -769,7 +769,7 @@
     justify-content: space-between;
 }
 .song__list-img {
-    width: 42px;
+    min-width: 42px;
     height: 42px;
     border-radius: 4px;
 }
