@@ -2,7 +2,7 @@ const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 const PLAYER_STORANGE = 'Huu_player'
 
-const playlist = $('.conten__song');
+const playlists = $$('.conten__song');
 const headings = $$('.player__title-song');
 const authors = $$('.player__title-author');
 const cdThumb = $('.player__container-image');
@@ -24,7 +24,7 @@ const volumeBtn = $('.player-volume')
 const footerFull = $('.app__footer')
 const closeFooterFull = $('.iconClose--footerFull')
 
-console.log()
+// console.log(playlist)
 
 const app = {
     currentIndex: 0,
@@ -169,7 +169,10 @@ const app = {
            </div>
           `
         })
-        playlist.innerHTML = htmls.join('')
+        playlists.forEach(playlist => {
+            playlist.innerHTML = htmls.join('')
+
+        })
     },
 
     handelEvent: function() {
@@ -365,24 +368,27 @@ const app = {
         })
 
         // PLAYLIST lắng nghe hành vi vaod playlist__song
-        playlist.onclick = function(e) {
-            const songNode = e.target.closest('.song__playlist:not(.active)')
-    
-            if(songNode || e.target.closest('.song__list-item')) {
-                //  Xử lí khi cklick vào song
-                if(songNode) {
-                    _this.currentIndex = Number(songNode.dataset.index);
-                    _this.loadCurrentSong()
-                    _this.render();
-                    audio.play()
-                
-                }
-
-                if(e.target.closest('.song__list-item')) {
+        playlists.forEach(playlist => {
+            playlist.onclick = function(e) {
+                const songNode = e.target.closest('.song__playlist:not(.active)')
+        
+                if(songNode || e.target.closest('.song__list-item')) {
+                    //  Xử lí khi cklick vào song
+                    if(songNode) {
+                        _this.currentIndex = Number(songNode.dataset.index);
+                        _this.loadCurrentSong()
+                        _this.render();
+                        audio.play()
                     
+                    }
+    
+                    if(e.target.closest('.song__list-item')) {
+                        
+                    }
                 }
-            }
-        };
+            };
+
+        })
 
         // Mở RỘNG TAP FOOTER__PLAYER      
         footerFull.onclick = function(e) {

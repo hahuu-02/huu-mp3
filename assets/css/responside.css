@@ -134,6 +134,9 @@
 
 
  /* HEADER */
+ .app__header {
+   height: 195px;
+ }
   .header {
     width: 100%;
   }
@@ -171,6 +174,10 @@
     margin: 0;
   }  
 
+  .conten__mp3 {
+    margin: 10px 0;
+  }
+  
   .conten__song {
     padding: 0;
   }

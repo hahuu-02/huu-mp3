@@ -863,7 +863,6 @@
 .conten__playlist {
     height: 300px;
     margin: 10px 20px;
-    width: 100%;
 }
 
 .playlist__navbar {
@@ -871,25 +870,54 @@
 }
 
 .playlist__music {
+    display: flex;
    max-width: 100%;
    overflow-x: auto;
 }
 
 .playlist__music-item {
-    height: 260px;
+    /* height: 260px; */
+}
+
+.playlist__item-link {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .playlist__item-creat {
-    height: 100%;
     background: linear-gradient(33deg, #5a1eae -7%, #ce267a 117%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+}
+
+.playlist__create-icon {   
+    display: block;
+    font-size: 4rem;
+    margin-bottom: 14px;
+    color: var(--white-color);
+    -webkit-text-stroke: 2px #992392;
+}
+.playlist__create-title {
+    display: block;
+    font-size: 1.4rem;
+    color: var(--white-color);
 }
 
 .playlist__item-img {
-    width: 100%;
-    height: 110px;
+    border: 1px solid #992392;
+    border-radius: 6px;
+    
 }
 
 .playlist__item-title {
+    height: 76px;
     display: flex;
     flex-direction: column;
 }
@@ -898,31 +926,55 @@
 
 }
 .playlist__title-link {
+    display: block;
+    margin: 6px 0 6px 4px;
     color: var(--white-color);
     text-decoration: none;
-    font-size: 1.3rem;
+    line-height: 1.8rem;
+    font-size: 1.2rem;
 }
 .playlist__title-author {
-    /* color: var(--text-color); */
-    color: white;
-    font-size: 1.2rem;
+    color: var(--tab-color);
+    padding: 0 4px;
+    font-size: 1.3rem;
 }
 
 .tab--item.active {
     display: block;
 }
+
+
+
 /* ============================================== */
 /* CONTAINER__SONG */
 
 .container__song {
+    margin-top: 30px;
     width: 100%;
     height: 100%;
     display: none;
 }
 
 /* =============================================== */
-.container__playlist {
+.container__playlist,
+.container__uploat,
+.container__abum,
+.container__MV,
+.container__author,
+.no-active {
+    background-color: var(--container__bg-color);
+    height: 100%;
+    width: 100%;
+    color: chocolate;
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 40px 14px;
+    line-height: 6rem;
     display: none;
+}
+.no-active {
+    margin: 70px 0;
+    height: 1000px;
 }
 .container__abum {
     display: none;
