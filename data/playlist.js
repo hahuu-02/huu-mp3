@@ -251,8 +251,6 @@ const app = {
             }
         });
 
-        
-
         //  loại bỏ sự kiện timeupdate liên tục
         let checkOnmouseAndTouch = true;
             progress.forEach(progressTime => {
@@ -364,8 +362,6 @@ const app = {
                 repeatBtn.classList.toggle('active--primary', _this.isRepeat)
                 
             };
-            
-
         })
 
         // PLAYLIST lắng nghe hành vi vaod playlist__song
@@ -399,8 +395,7 @@ const app = {
                 if( e.target.closest('.player__control')) {
 
                 }
-            }
-            
+            }           
         };
 
         //  ĐÓNG TAB FOOTER__FULL
@@ -488,6 +483,7 @@ const app = {
         this.loadCurrentSong();
 
         // lưu cấu hình vào localStorange
+
         // randomBtns.forEach(randomBtn => {
         //     randomBtn.classList.toggle('active--primary', this.isRandom)
         // });
