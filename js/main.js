@@ -1,4 +1,5 @@
-
+const u = document.querySelector.bind(document);
+const uu = document.querySelectorAll.bind(document);
 
 // loaij bỏ sụ kiện fourc
 
@@ -6,6 +7,17 @@ var ulElement = document.querySelector('.header__search-history');
 
 ulElement.onmousedown = function(e) {
     e.preventDefault();
+}
+
+const logOut = u('.app__header-options')
+//  NOTE
+logOut.onclick = function(e) {
+    e.stopPropagation();
+    logOut.classList.add('active')
+    
+    u('.app').onclick = function() {
+        u('.app__header-options').classList.remove('active')
+    }
 }
 
 // chức năng hiện message (chức năng chưa phát triển)
@@ -97,8 +109,7 @@ closeSidebar.onclick = function() {
 
 // Tab UI mục Cá Nhân
 
-const u = document.querySelector.bind(document);
-const uu = document.querySelectorAll.bind(document);
+
 
 const tabUis = uu('.ui__list-item')
 const tabContens = uu('.tab--item')

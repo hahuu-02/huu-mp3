@@ -512,6 +512,7 @@
     }
 
 .app__header-options {
+    display: block;
     height: 30px;
     width: 30px;
     border-radius: 50%;
@@ -535,7 +536,7 @@
     width: 200px;
     background-color: var(--primary-bg);
     border-radius: 8px;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: flex-start;
     display: none;
@@ -549,8 +550,8 @@
     color: var(--white-color);
     font-size: 1.4rem;
 }
-.app__header-options:focus ~ .app__header-log-out {
-    display: block;
+.app__header-options.active .app__header-log-out {
+    display: flex;
 }
 
 /* CONTAINER UI */
@@ -1194,7 +1195,7 @@
   } */
 
 .progress::-webkit-slider-thumb:hover {
-    background: rgb(153, 135, 150);
+    background: rgb(96, 177, 29);
     height: 18px;
     width: 18px;
   }

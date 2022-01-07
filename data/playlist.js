@@ -90,6 +90,13 @@ const app = {
             song: './data/music-playlist/dạ vũ.mp3',
         },
         {
+            name: 'Dancing With Your Gost',
+            author: 'Hữu hát chứ ai nữa',
+            time: '3:50',
+            image:'./data/img-playlist/DCJQ7231.JPEG' ,
+            song: './data/music-playlist/Dancing With Your Ghost.mp3',
+        },
+        {
             name: 'Hạc Giấy',
             author: 'Yến Napun x Ciray',
             time: '3:58',
@@ -118,6 +125,13 @@ const app = {
             song: './data/music-playlist/Summertime _Sunshine_.mp3',
         },
         {
+            name: 'Let Me Down Slowly',
+            author: 'Hà Hữu',
+            time: '4:42',
+            image:'./data/img-playlist/BBXW9760.JPEG' ,
+            song: './data/music-playlist/Let Me Down Slowly.mp3',
+        },
+        {
             name: 'Trắc trở (Remix)',
             author: 'Hương ly',
             time: '4:44',
@@ -133,6 +147,7 @@ const app = {
         this.config[key] = value;
         localStorage.setItem(PLAYER_STORANGE, JSON.stringify(this.config))
     },
+
     render: function() {
         const htmls = this.songs.map((song, index) => {
             return `
