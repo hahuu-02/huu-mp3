@@ -23,8 +23,9 @@ const repeatBtns = $$('.icon-repeat')
 const volumeBtn = $('.player-volume')
 const footerFull = $('.app__footer')
 const closeFooterFull = $('.iconClose--footerFull')
+const playAlls = $$('.button-function')
 
-// console.log(playlist)
+// console.log(playAll)
 
 const app = {
     currentIndex: 0,
@@ -233,6 +234,14 @@ const app = {
             cdThumbAnimate1.play()
             cdThumbAnimate2.play()
         } 
+
+        //  KHI ÂN NÚT PHÁT TẤT CẢ
+        playAlls.forEach(playAll => {
+            playAll.onclick = function() {
+                audio.play();
+            }
+        })
+
         // Khi song bị pause
         audio.onpause = function() {
             _this.isPlaying = false
