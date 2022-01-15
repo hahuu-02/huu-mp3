@@ -23,6 +23,11 @@
     --sidebar__logo-height: 70px;
     --sidebar__nav-heigth: 210px;
     --sidebar__creat-playlist-heigth: 44px;
+
+    --offset-x-second: calc(0px - ((230px - (230px * var(--scale-rate-second))) / 2 + 20px));
+    --offset-x-third: calc(0px - ((230px - (230px * var(--scale-rate-third))) / 2 + 40px));
+    --scale-rate-second: calc(196 / 230);
+    --scale-rate-third: calc(162 / 230);
 }
 
 * {

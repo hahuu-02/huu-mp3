@@ -24,7 +24,7 @@ const volumeBtn = $('.player-volume')
 const footerFull = $('.app__footer')
 const closeFooterFull = $('.iconClose--footerFull')
 const playAlls = $$('.button-function')
-
+const slideImgs = $$('.conten__slide-item')
 // console.log(playAll)
 
 const app = {
@@ -72,6 +72,7 @@ const app = {
         {
             name: 'Chia Cách Bình Yên',
             author: 'Quốc Thiên',
+            time: '4:05',
             image:'./data/img-playlist/hương ly.jpg' ,
             song: './data/music-playlist/Chia cách bình yên.mp3',
         },
@@ -95,6 +96,13 @@ const app = {
             time: '3:50',
             image:'./data/img-playlist/DCJQ7231.JPEG' ,
             song: './data/music-playlist/Dancing With Your Ghost.mp3',
+        },
+        {
+            name: 'Em Hát Ai Nghe',
+            author: 'Hữu Lofi',
+            time: '4:00',
+            image:'./data/img-playlist/GFQQ3926.JPEG' ,
+            song: './data/music-playlist/Em Hát Ai Nghe.mp3',
         },
         {
             name: 'Hạc Giấy',
@@ -196,6 +204,25 @@ const app = {
             progressBtn.innerHTML = this.value;
         }
         const _this = this
+
+        let imgIndex = 2,
+            slideShow = function() {
+                const slideImgFirst = $('.conten__slide-item.slide1')
+                const slideImgSecond = $('.conten__slide-item.slide2')
+                const slideImgThird = slideImgs[imgIndex]
+                const slideImgFourth = slideImgs[imgIndex === slideImgs.length -1 ?  0 : imgIndex + 1]
+                slideImgFourth.classList.replace('slide4', 'slide3')
+                slideImgThird.classList.replace('slide3', 'slide2')
+                slideImgSecond.classList.replace('slide2', 'slide1')
+                slideImgFirst.classList.replace('slide1', 'slide4')
+                imgIndex++;
+                if(imgIndex >= slideImgs.length) { //imgIndex: 0-7, slideImgs.length: 8
+                    imgIndex = 0;
+                }
+                setTimeout(slideShow, 2500)
+            };
+                
+            slideShow();
 
         // Xử lí quay image
        
@@ -325,6 +352,7 @@ const app = {
             remaningTimes.forEach(remaningTime => {
                 remaningTime.textContent = formatTimes(currentTime);
             })
+
         };
 
         // ÂM LƯỢNG BÀI HÁT  'CHƯA CHỈNH SỬA'
@@ -500,9 +528,14 @@ const app = {
         this.isRepeat = this.config.isRepeat
     },
 
+    
+    
+
+        
+
     start: function() {
         // GÁN CẤU HÌNH VÀO ỨNG DỤNG
-        this.loatConfig();
+        // this.loatConfig();
 
         this.defineProperties();
 
@@ -511,6 +544,7 @@ const app = {
         this.handelEvent();
 
         this.loadCurrentSong();
+
 
         // lưu cấu hình vào localStorange
 
@@ -525,3 +559,5 @@ const app = {
 }
 
 app.start();
+
+
