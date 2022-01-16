@@ -270,7 +270,7 @@ const app = {
         audio.onplay = function() {
             _this.isPlaying = true
             playBtns.forEach(playBtn => {
-            playBtn.classList.add('active--audio') 
+                playBtn.classList.add('active--audio') 
             } );
             cdThumbAnimate.play();
             cdThumbAnimate1.play()
@@ -315,6 +315,14 @@ const app = {
                 progressTime.ontouchstart = function() {
                     checkOnmouseAndTouch = false;
                 }
+                // Xử lí bắt time tua song
+                progressTime.oninput = function(e) {
+                    const timeInput = e.target.value*audio.duration/100
+                    
+                    remaningTimes.forEach(remaningTime => {
+                        remaningTime.textContent = formatTimes(timeInput);
+                    })
+                }
             })
             
 
@@ -326,7 +334,7 @@ const app = {
                 const timeUpdate = Math.floor(audio.currentTime / audio.duration * 100)
                    progress.forEach(progressTime => {
                     progressTime.value = timeUpdate
-
+                    
                    })
             }
             // THỜI LƯỢNG BÀI HÁT
@@ -352,6 +360,8 @@ const app = {
             remaningTimes.forEach(remaningTime => {
                 remaningTime.textContent = formatTimes(currentTime);
             })
+
+            
 
         };
 
@@ -402,10 +412,8 @@ const app = {
         audio.onended = function() {
             if(_this.isRepeat) {
                 audio.play();
-            } else {
-                nextBtns.forEach(nextBtn => {
-                    nextBtn.click(); 
-                })
+            } else {              
+                nextBtns[0].click(); 
             }
         };
 
