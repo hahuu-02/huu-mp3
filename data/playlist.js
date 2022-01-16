@@ -530,10 +530,14 @@ const app = {
     // THANH CUỘN AUTO ACTIVE SONG
     scrollToactivesong: function() {
         setTimeout(() => {
-            $('.song__playlist.active').scrollIntoView({
-                behavior: 'smooth',
-                block: 'end'
-            }) 
+            const scrollSongs = $$('.song__playlist.active')
+            scrollSongs.forEach(scrollSong => {
+                scrollSong.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                })
+            })
+             
         }, 200)  
         
     },
