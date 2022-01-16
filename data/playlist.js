@@ -56,6 +56,13 @@ const app = {
             song: './data/music-playlist/Âm Thầm Bên Em (Lofi Ver.) - Sơn Tùng M-TP x Quanvrox.mp3',
         },
         {
+            name: 'Attention',
+            author: 'Hữu nè<3',
+            time: '3:16',
+            image:'./data/img-playlist/attesion.png' ,
+            song: './data/music-playlist/Charlie Puth - Attention _Official Video_.mp3',
+        },
+        {
             name: 'Biết Tìm Đâu',
             author: 'Tiến Tới',
             time: '3:57',
@@ -105,11 +112,32 @@ const app = {
             song: './data/music-playlist/Em Hát Ai Nghe.mp3',
         },
         {
+            name: 'Em Khác Gì Hoa',
+            author: 'Lil Zpoet',
+            time: '3:16',
+            image:'./data/img-playlist/IMG_2744.jpeg' ,
+            song: './data/music-playlist/Em Khác Gì Hoa - Lil Zpoet _ Lyrics Video.mp3',
+        },
+        {
+            name: 'Kẻ Theo Đuổi Ánh Sáng (Lofi Ver.)',
+            author: 'Huy Vạc x Tiến Nguyễn x Freak ',
+            time: '3:16',
+            image:'./data/img-playlist/IMG_2783.JPG' ,
+            song: './data/music-playlist/Kẻ Theo Đuổi Ánh Sáng (Lofi Ver.) - Huy Vạc x Tiến Nguyễn x Freak D.mp3',
+        },
+        {
             name: 'Hạc Giấy',
             author: 'Yến Napun x Ciray',
             time: '3:58',
             image:'./data/img-playlist/hạc giấy.jpg' ,
             song: './data/music-playlist/Hạc Giấy - Yến Napun x Ciray _ Ngày Mai Nếu Lúc Thức Dậy Và Em Thấy Anh Bên Cạnh Remix Hot Tik Tok.mp3',
+        },
+        {
+            name: 'Hoa Tàn Tình Tan',
+            author: 'Hữu đẹp trai thật ẹ',
+            time: '3:16',
+            image:'./data/img-playlist/httan.jpg' ,
+            song: './data/music-playlist/Hoa Tàn Tình Tan Remix - Giang Jolee.mp3',
         },
         {
             name: 'Hạnh Phúc Em Không Có',
@@ -119,6 +147,20 @@ const app = {
             song: '/data/music-playlist/hạnh phúc em k có.mp3',
         },
         {
+            name: 'Hẹn Ngày Mai Yêu',
+            author: 'Long Cao',
+            time: '3:16',
+            image:'./data/img-playlist/hnmyeu.jpg' ,
+            song: './data/music-playlist/Hẹn Ngày Mai Yêu - OST Phim Yêu Ư Để Sau - Long Cao.mp3',
+        },
+        {
+            name: 'Váy Cưới',
+            author: 'Trung Tự/ HuyLee',
+            time: '3:16',
+            image:'./data/img-playlist/vaycuoi.jpg' ,
+            song: './data/music-playlist/Váy Cưới Remix HuyLee.mp3',
+        },
+        {
             name: 'Nevada',
             author: 'Hà Hữu',
             time: '3:28',
@@ -126,11 +168,18 @@ const app = {
             song: './data/music-playlist/Nevada.mp3',
         },
         {
-            name: 'Sumertime',
+            name: 'SuperIdo',
             author: 'Hà Hữu',
             time: '4:42',
-            image:'./data/img-playlist/IMG_E2611 (3).JPG' ,
-            song: './data/music-playlist/Summertime _Sunshine_.mp3',
+            image:'./data/img-playlist/super.jpg' ,
+            song: './data/music-playlist/Super Idol Tune -.mp3',
+        },
+        {
+            name: 'Until You',
+            author: 'Hữu đẹp trai thật ẹ',
+            time: '3:16',
+            image:'./data/img-playlist/IMG_2733.jpg' ,
+            song: './data/music-playlist/Shayne Ward - Until You (Audio).mp3',
         },
         {
             name: 'Let Me Down Slowly',
@@ -146,7 +195,7 @@ const app = {
             image:'./data/img-playlist/hương ly.jpg' ,
             song: './data/music-playlist/Trắc Trở REMIX.mp3',
         },
-       
+        
         
       
     

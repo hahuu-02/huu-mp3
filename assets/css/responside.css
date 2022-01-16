@@ -185,6 +185,10 @@
   .song__list-conten {
     width: 80%;
   }
+
+  .song__list-conten-title {
+    padding-top: 2px;
+  }
   .song__list-time {
     width: 0;
  }
@@ -197,7 +201,7 @@
 
 
  .playlist__item-img {
-   height: 150px;
+   
  }
   /* FOOTER */
   .app__footer {
