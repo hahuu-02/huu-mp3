@@ -9,7 +9,40 @@
   .player__control-tab {
     width: 94%;
   }
+
+
+
+  /* == tAB_EXPLORE */
+
+  .explore__playlist-sidebar {
+    width: 100%;
+  }
+  .explore__playlist-conten {
+    display: block;
+  }
+
+  .explore__sidebar-conten {
+    width: 100%;
+  }
+
+  .explore__sidebar-list {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    overflow: inherit;
+  }
+
+  .explore__sidebar-item {
+    display: block;
+  }
+
+  .explore__sidebar-item-info {
+    margin: 6px 0 0 20px;
+  }
+
 }
+
+
 
 /* TAPLET */
 

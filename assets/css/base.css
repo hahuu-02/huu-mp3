@@ -92,7 +92,8 @@ html {
     height: 44px;
     outline: none;
     display: flex;
-    margin: auto;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     border-radius: 50%;
     background: var(--bg-content-color);

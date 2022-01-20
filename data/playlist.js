@@ -206,7 +206,7 @@ const app = {
     },
 
     render: function() {
-        const htmls = this.songs.map((song, index) => {
+        const html = this.songs.map((song, index) => {
             return `
             <div class="song__playlist ${index === this.currentIndex ? 'active' : ''}" data-index="${index}">
                 <div class="song__list ">
@@ -243,7 +243,7 @@ const app = {
           `
         })
         playlists.forEach(playlist => {
-            playlist.innerHTML = htmls.join('')
+            playlist.innerHTML = html.join('')
 
         })
     },
@@ -480,7 +480,7 @@ const app = {
         playlists.forEach(playlist => {
             playlist.onclick = function(e) {
                 const songNode = e.target.closest('.song__playlist:not(.active)')
-        
+
                 if(songNode || e.target.closest('.song__list-item')) {
                     //  Xử lí khi cklick vào song
                     if(songNode) {
@@ -488,7 +488,7 @@ const app = {
                         _this.loadCurrentSong()
                         _this.render();
                         audio.play()
-                    
+                        
                     }
     
                     if(e.target.closest('.song__list-item')) {

@@ -128,7 +128,7 @@ tabUis.forEach((tabUi, index) => {
 
 // Tab UI-ITEM APP__SIDEBAR
 const sidebarUis = uu('.sidebar__nav-item')
-const tabItems = uu('.app__')
+const tabItems = uu('.app__container')
 
 sidebarUis.forEach((sidebarUi, index) => {
     sidebarUi.onclick = function(e) {
@@ -138,7 +138,7 @@ sidebarUis.forEach((sidebarUi, index) => {
         
         if(index >= 0 && index <= 4) {
             u('.sidebar__nav-item.active').classList.remove('active')      
-            u('.app__.active').classList.remove('active')
+            u('.app__container.active').classList.remove('active')
             
             sidebarUi.classList.add('active')
             tabItem.classList.add('active')
