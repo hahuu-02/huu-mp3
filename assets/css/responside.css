@@ -16,11 +16,18 @@
 
   .explore__playlist-sidebar {
     width: 100%;
+   
   }
   .explore__playlist-conten {
     display: block;
   }
 
+  .explore__playlist-title {
+    padding: 0 8px;
+  }
+  .explore__playlist {
+    padding: 00;
+  }
   .explore__sidebar-conten {
     width: 100%;
   }
@@ -40,6 +47,9 @@
     margin: 6px 0 0 20px;
   }
 
+  .explore__playlist-video {
+    margin-right: 0;
+  }
 }
 
 

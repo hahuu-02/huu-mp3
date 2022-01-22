@@ -194,10 +194,14 @@ const app = {
             time: '4:44',
             image:'./data/img-playlist/hương ly.jpg' ,
             song: './data/music-playlist/Trắc Trở REMIX.mp3',
+        },       
+        {
+            name: 'Rượi Sầu Tương Tư',
+            author: 'Hữu Lofi',
+            time: '3:40',
+            image:'./data/img-playlist/IMG_2733.jpg' ,
+            song: './data/music-playlist/Rượu Sầu Tương Tư.mp3',
         },
-        
-        
-      
     
     ],
     setConfig: function(key, value) {

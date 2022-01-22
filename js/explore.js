@@ -15,18 +15,18 @@ const explore = {
     currentIndex: 0,
     videos: [
         {
-            songName: 'Em Hát Ai Nghe',
-            songImg: './data/img-explore/emhat.jpg',
-            authorName: 'huu',
-            authorImg: './assets/img/cltc.jpg',
-            src: 'https://www.youtube.com/embed/gDzzEo5nrCM',
+            songName: 'Càng Níu Dữ Càng Dễ Mất',
+            songImg: './data/img-explore/cndcdemat.jpg',
+            authorName: 'Mr.SiRo',
+            authorImg: './data/img-explore/cndcdemat.jpg',
+            src: 'https://www.youtube.com/embed/aOXvyd9v1cg',
         },
         {
-            songName: 'Nụ Cười Xuân',
-            songImg: './data/img-explore/ncxuan.jpg',
-            authorName: 'H2k',
-            authorImg: './data/author-explore/h2k.jpg',
-            src: 'https://www.youtube.com/embed/r-pjlntJrJs',
+            songName: 'Chạm Đáy Nỗi Đau',
+            songImg: './data/img-explore/cdnodau.jpg',
+            authorName: 'Erik',
+            authorImg: './data/author-explore/erik.jpg',
+            src: 'https://www.youtube.com/embed/8BAdhoeabUM',
         },
         {
             songName: 'Có Hẹn Với Thanh Xuân',
@@ -39,7 +39,7 @@ const explore = {
             songName: 'Chạnh Lòng Thương Cô',
             songImg: './data/img-explore/clthugco.jpg',
             authorName: 'Huy Vạc x Hưng Hách',
-            authorImg: '',
+            authorImg: './assets/img/cltc.jpg',
             src: 'https://www.youtube.com/embed/xJa2vKez9XI',
         },
         {
@@ -50,11 +50,18 @@ const explore = {
             src: 'https://www.youtube.com/embed/4CCGI83vOVo',
         },
         {
-            songName: 'Kẹo Bông Gòn',
-            songImg: './data/img-explore/kẹobgonf.jpg',
-            authorName: 'H2k',
-            authorImg: './data/author-explore/h2k.jpg',
-            src: 'https://www.youtube.com/embed/sHa5nQO3jwA',
+            songName: 'Đi Để Trở Về',
+            songImg: './data/img-explore/didetrove.jpg',
+            authorName: 'Soobin',
+            authorImg: './data/author-explore/soobin.jpg',
+            src: 'https://www.youtube.com/embed/wnSNyE2hVu4',
+        },
+        {
+            songName: 'Em Hát Ai Nghe',
+            songImg: './data/img-explore/emhat.jpg',
+            authorName: 'huu',
+            authorImg: './assets/img/IMG_3933.jpeg',
+            src: 'https://www.youtube.com/embed/gDzzEo5nrCM',
         },
         {
             songName: 'Em Không Sai Chúng Ta Sai',
@@ -64,13 +71,33 @@ const explore = {
             src: 'https://www.youtube.com/embed/iwGuiSnr2Qc',
         },
         {
+            songName: 'Kẹo Bông Gòn',
+            songImg: './data/img-explore/kẹobgonf.jpg',
+            authorName: 'H2k',
+            authorImg: './data/author-explore/h2k.jpg',
+            src: 'https://www.youtube.com/embed/sHa5nQO3jwA',
+        },
+        {
+            songName: 'Nụ Cười Xuân',
+            songImg: './data/img-explore/ncxuan.jpg',
+            authorName: 'H2k',
+            authorImg: './data/author-explore/h2k.jpg',
+            src: 'https://www.youtube.com/embed/r-pjlntJrJs',
+        },
+        {
             songName: 'Mang Tiền Về Cho Mẹ',
             songImg: './data/img-explore/mtvechome.jpg',
             authorName: 'ĐEn x Vâu',
             authorImg: './data/author-explore/denvau.jpg',
             src: 'https://www.youtube.com/embed/UVbv-PJXm14',
         },
-        
+        {
+            songName: 'Môt Bước Yêu Vạn Dặm Đau',
+            songImg: './data/img-explore/mbyvddau.jpg',
+            authorName: 'Mr.SiRo',
+            authorImg: './data/author-explore/sỉo2.jpg.crdownload',
+            src: 'https://www.youtube.com/embed/GwCUbhE0TY0',
+        },
     ],
 
     renderExplore: function() {
@@ -143,6 +170,7 @@ const explore = {
         // ĐÓNG TAB VIDEO
         closeExplore.onclick = function() {
             a('.tab--explore').classList.remove('active--video')
+            iframe.src =''
         }
     },
 
@@ -159,7 +187,7 @@ const explore = {
         a('.explore__title-info-name').textContent = this.currentVideo.songName
         a('.explore__title-introl-img').src = this.currentVideo.authorImg
 
-        iframe.src = this.currentVideo.src
+        iframe.src = this.currentVideo.src + "?autoplay=1"
     },
 
     
@@ -168,7 +196,7 @@ const explore = {
         this.defineProperties();
         this.renderExplore();
         this.renderSidebar();
-        this.loatcurrentVideo();
+        // this.loatcurrentVideo();
         this.handleEvent();
     }
 }
