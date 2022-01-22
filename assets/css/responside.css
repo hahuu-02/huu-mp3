@@ -50,6 +50,10 @@
   .explore__playlist-video {
     margin-right: 0;
   }
+
+  .explore__playlist-video {
+    padding-bottom: 56.25%;
+  }
 }
 
 
