@@ -16,9 +16,11 @@
 
   .explore__playlist-sidebar {
     width: 100%;
-   
+   max-height:90vh;
+   overflow: auto;
   }
   .explore__playlist-conten {
+    position: fixed;
     display: block;
   }
 
@@ -40,7 +42,9 @@
   }
 
   .explore__sidebar-item {
-    display: block;
+    min-height: 100px;
+    max-height: 130px;
+    /* display: block; */
   }
 
   .explore__sidebar-item-info {
@@ -52,7 +56,7 @@
   }
 
   .explore__playlist-video {
-    padding-bottom: 56.25%;
+    padding-bottom: 57.25%;
   }
 }
 
