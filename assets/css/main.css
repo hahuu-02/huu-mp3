@@ -442,7 +442,8 @@
 
 .app__container {
     margin-top: 70px;
-    height: 3000px;
+    padding-bottom: 200px;
+    /* height: 3000px; */
     width: calc(100% - 240px);
     top: 0;
     right: 0;
@@ -1061,9 +1062,22 @@
     padding: 0 34px;
 }
 
+.item {
+    
+}
+
+.container__explore-header {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
 .explore__container {
     width: 100%;
     height: 100%;
+}
+
+.explore__header-img {
+    width: 100%;
+    height: auto;
 }
 
 .container__explore-selection {   

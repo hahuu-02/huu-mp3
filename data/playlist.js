@@ -272,10 +272,8 @@ const app = {
                 if(imgIndex >= slideImgs.length) { //imgIndex: 0-7, slideImgs.length: 8
                     imgIndex = 0;
                 }
-                setTimeout(slideShow, 2500)
             };
-                
-            slideShow();
+            setInterval(slideShow, 2500)
 
         // Xử lí quay image
        
@@ -284,7 +282,7 @@ const app = {
             ], {
             duration: 15000,
             iterations: Infinity
-            
+          
         });            
         cdThumbAnimate.pause();
 
@@ -387,7 +385,6 @@ const app = {
                 const timeUpdate = Math.floor(audio.currentTime / audio.duration * 100)
                    progress.forEach(progressTime => {
                     progressTime.value = timeUpdate
-                    
                    })
             }
             // THỜI LƯỢNG BÀI HÁT
@@ -413,16 +410,14 @@ const app = {
             remaningTimes.forEach(remaningTime => {
                 remaningTime.textContent = formatTimes(currentTime);
             })
-
-            
-
         };
 
-        // ÂM LƯỢNG BÀI HÁT  'CHƯA CHỈNH SỬA'
-        volumeBtn.onchange = function(e) {
+        // ÂM LƯỢNG BÀI HÁT  'Đã chỉnh sửa CHỈNH SỬA'
+        volumeBtn.oninput = (e) => {
             const seekVolume =  e.target.value / 100
-            audio.volume = seekVolume       
-        },
+            console.log(seekVolume)
+            audio.volume = seekVolume     
+        }
 
         // Khi next bài hát
         nextBtns.forEach(nextBtn => {
@@ -434,8 +429,7 @@ const app = {
                 }
                 audio.play()
                 _this.render()
-                _this.scrollToactivesong()
-    
+                _this.scrollToactivesong()   
             }
         })
         // 
@@ -559,7 +553,9 @@ const app = {
         cdThumb1.style.background = `url('${this.currentSong.image}') no-repeat center / cover`
        
         cdThumb2.style.background = `url('${this.currentSong.image}') no-repeat center / cover`
-        audio.src = this.currentSong.song         
+        audio.src = this.currentSong.song    
+        
+        volumeBtn.value = "50"
     },
 
     // NEXT / PREV SONG

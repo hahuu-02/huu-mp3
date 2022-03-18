@@ -153,6 +153,7 @@ const explore = {
         const _this = this;
         // MỞ TAP VIDEO
         exploreList.onclick = function(e) {
+            console.log(e)
             const videoItem = e.target.closest('.video--playlist')
             videoNode.classList.add('active--video')
             _this.currentIndex = Number(videoItem.dataset.index);
